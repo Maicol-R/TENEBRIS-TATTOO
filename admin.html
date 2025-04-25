@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenebris Tattoo - Panel de Administración</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- CSS Panel de Administración -->
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+  <!-- Encabezado de Administración -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          TENEBRIS TATTOO <span class="badge bg-warning text-dark fs-6 ms-2">ADMIN</span>
+        </a>
+
+        <div class="ms-auto d-flex align-items-center gap-3">
+          <a href="index.html" class="btn btn-sm btn-tenebris-outline" target="_blank">
+            <i class="fas fa-external-link-alt me-1"></i> Ver Sitio Web
+          </a>
+          <button id="logoutBtn" class="btn btn-sm btn-danger" style="display: none;">
+            <i class="fas fa-sign-out-alt me-1"></i> Salir
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PANTALLA 1: Acceso Seguro con Clave -->
+  <div id="loginScreen" class="container">
+    <div class="admin-login-box">
+      <div class="mb-3">
+        <i class="fas fa-user-shield text-warning" style="font-size: 3rem;"></i>
+      </div>
+      <h3 class="mb-2 text-white">Panel de Control</h3>
+      <p class="text-muted small mb-4">Ingresa tu clave de administrador para gestionar fotos, videos y citas.</p>
+
+      <form id="loginForm">
+        <div class="mb-3 text-start">
+          <label for="adminPin" class="form-label text-light small fw-bold">Contraseña de Administrador</label>
+          <input type="password" class="form-control text-center fs-5" id="adminPin" placeholder="••••" required autofocus>
+          <div class="form-text text-muted text-center mt-2 small">
+            Clave predeterminada inicial: <strong>1234</strong>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-tenebris-gold w-100 py-2">
+          <i class="fas fa-unlock-alt me-1"></i> Entrar al Panel
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- PANTALLA 2: Dashboard Administrativo -->
+  <div id="dashboardScreen" class="container admin-wrapper" style="display: none;">
+    
+    <!-- Resumen de Estadísticas -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <div class="admin-card text-center py-3 mb-0">
+          <div class="stat-badge" id="statCitasCount">0</div>
+          <div class="text-muted text-uppercase small mt-1">Citas Agendadas</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="admin-card text-center py-3 mb-0">
+          <div class="stat-badge" id="statFotosCount">0</div>
+          <div class="text-muted text-uppercase small mt-1">Fotos en Galería</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="admin-card text-center py-3 mb-0">
+          <div class="stat-badge" id="statVideosCount">0</div>
+          <div class="text-muted text-uppercase small mt-1">Videos Publicados</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pestañas de Navegación del Panel -->
+    <ul class="nav admin-nav-tabs mb-4" id="adminTabs" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" id="citas-tab" data-bs-toggle="tab" data-bs-target="#citasTab" type="button">
+          <i class="fas fa-calendar-check me-1"></i> Citas de Clientes
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="galeria-tab" data-bs-toggle="tab" data-bs-target="#galeriaTab" type="button">
+          <i class="fas fa-images me-1"></i> Subir Fotos a Galería
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="videos-tab" data-bs-toggle="tab" data-bs-target="#videosTab" type="button">
+          <i class="fab fa-tiktok me-1"></i> Administrar Videos
+        </button>
+      </li>
+    </ul>
+
+    <!-- Contenido de las Pestañas -->
+    <div class="tab-content" id="adminTabsContent">
+      
+      <!-- PESTAÑA 1: Citas Agendadas -->
+      <div class="tab-pane fade show active" id="citasTab">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h4 class="m-0 text-white"><i class="fas fa-calendar-alt text-warning me-2"></i>Gestión de Citas</h4>
+              <small class="text-muted">Citas registradas por clientes desde la página web</small>
+            </div>
+            <button class="btn btn-sm btn-tenebris-outline" onclick="renderAdminCitas()">
+              <i class="fas fa-sync-alt me-1"></i> Actualizar
+            </button>
+          </div>
+
+          <div id="citasListContainer">
+            <!-- Citas se inyectan dinámicamente -->
+          </div>
+        </div>
+      </div>
+
+      <!-- PESTAÑA 2: Galería de Fotos -->
+      <div class="tab-pane fade" id="galeriaTab">
+        <div class="row">
+          <!-- Formulario para Subir Foto -->
+          <div class="col-lg-5 mb-4">
+            <div class="admin-card">
+              <h4 class="mb-3 text-white"><i class="fas fa-cloud-upload-alt text-warning me-2"></i>Publicar Nuevo Tatuaje</h4>
+              
+              <form id="uploadPhotoForm">
+                <div class="mb-3">
+                  <label class="form-label text-light small fw-bold">Seleccionar Imagen *</label>
+                  <input type="file" class="form-control" id="photoFileInput" accept="image/*" required>
+                  <small class="text-muted">Formatos: JPG, PNG, WEBP (se optimiza automáticamente).</small>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label text-light small fw-bold">Título o Nombre de la Obra *</label>
+                  <input type="text" class="form-control" id="photoTitleInput" placeholder="Ej: Manga Dragón Sombras" required>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label text-light small fw-bold">Categoría / Estilo *</label>
+                  <select class="form-select" id="photoCategorySelect" required>
+                    <option value="blackwork">Black & Grey</option>
+                    <option value="realismo">Realismo</option>
+                    <option value="fina">Línea Fina & Arte</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-tenebris-gold w-100 py-2">
+                  <i class="fas fa-plus-circle me-1"></i> Publicar en la Web
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Lista de Fotos Actuales -->
+          <div class="col-lg-7">
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h4 class="m-0 text-white">Fotos en la Galería</h4>
+                <small class="text-muted">Total: <span id="photoCountDisplay">0</span></small>
+              </div>
+
+              <div id="galleryListContainer" style="max-height: 550px; overflow-y: auto;">
+                <!-- Lista de fotos -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PESTAÑA 3: Videos de TikTok -->
+      <div class="tab-pane fade" id="videosTab">
+        <div class="row">
+          <!-- Formulario Agregar Video -->
+          <div class="col-lg-5 mb-4">
+            <div class="admin-card">
+              <h4 class="mb-3 text-white"><i class="fab fa-tiktok text-warning me-2"></i>Agregar Video de TikTok</h4>
+              
+              <form id="addVideoForm">
+                <div class="mb-3">
+                  <label class="form-label text-light small fw-bold">Enlace del Video de TikTok *</label>
+                  <input type="url" class="form-control" id="videoUrlInput" placeholder="https://www.tiktok.com/@tenebris__tattoo/video/..." required>
+                  <small class="text-muted">Copia el enlace directo desde la app o web de TikTok.</small>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label text-light small fw-bold">Título del Video *</label>
+                  <input type="text" class="form-control" id="videoTitleInput" placeholder="Ej: Proceso de calavera en sombras" required>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label text-light small fw-bold">Hashtags o Detalles</label>
+                  <input type="text" class="form-control" id="videoTagsInput" placeholder="#tattoo #bogota #realismo">
+                </div>
+
+                <button type="submit" class="btn btn-tenebris-gold w-100 py-2">
+                  <i class="fas fa-video me-1"></i> Publicar Video
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Lista de Videos -->
+          <div class="col-lg-7">
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h4 class="m-0 text-white">Videos Publicados</h4>
+                <small class="text-muted">Total: <span id="videoCountDisplay">0</span></small>
+              </div>
+
+              <div id="videoListContainer" style="max-height: 550px; overflow-y: auto;">
+                <!-- Lista de videos -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast de Notificación -->
+  <div id="adminToast" class="custom-notification" style="display: none;">
+    <p id="adminToastMessage" class="m-0"></p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="admin.js"></script>
+</body>
+
+</html>
+

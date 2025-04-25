@@ -4,119 +4,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tenebris Tattoo - Agenda</title>
+  <title>Tenebris Tattoo - Agenda de Citas</title>
+  <meta name="description" content="Agenda tu cita de tatuaje en Tenebris Tattoo Bogotá. Consulta disponibilidad y reserva directamente.">
+
   <!-- Fuentes de Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS (necesario para los tooltips y estilos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
   <!-- FullCalendar CSS -->
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
-  <!-- Tu CSS personalizado -->
-  <link href="styles.css" rel="stylesheet">
+
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="styles.css">
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <!-- Header (como ya tienes) -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">TENEBRIS TATTOO</a>
+  <!-- Encabezado y Navegación Principal -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" aria-label="Tenebris Tattoo">
+          <span style="--i:1">T</span>
+          <span style="--i:2">E</span>
+          <span style="--i:3">N</span>
+          <span style="--i:4">E</span>
+          <span style="--i:5">B</span>
+          <span style="--i:6">R</span>
+          <span style="--i:7">I</span>
+          <span style="--i:8">S</span>
+          <span style="--i:9">&nbsp;</span>
+          <span style="--i:10">T</span>
+          <span style="--i:11">A</span>
+          <span style="--i:12">T</span>
+          <span style="--i:13">T</span>
+          <span style="--i:14">O</span>
+          <span style="--i:15">O</span>
+        </a>
+
+        <!-- Botón Hamburguesa para Móviles -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Menú de Enlaces Simplificado y Elegante -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html#intro">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#galeria">Galería</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#testimonios">Testimonios</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#intro">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#galeria">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="videos.html">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contacto">Contacto</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn-nav-cta active" href="agenda.html">
+                <i class="fas fa-calendar-alt"></i> Agendar Cita
+              </a>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a class="nav-admin-link" href="admin.html" title="Panel de Administración">
+                <i class="fas fa-lock"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Contenido principal -->
+  <!-- Contenido Principal de Agenda -->
   <main class="container my-5">
-    <h1 class="text-center agenda-title">Agenda</h1>
+    <div class="agenda-header">
+      <h1 class="agenda-title">Agenda & Disponibilidad</h1>
+      <p class="text-muted">Haz clic en cualquier día libre para apartar tu cita o selecciona una cita para ver los detalles.</p>
+    </div>
 
     <!-- Buscador de citas -->
-    <div class="search-container mb-3">
+    <div class="search-container">
       <div class="input-group">
-        <input type="text" class="form-control" id="eventSearch" placeholder="Buscar citas...">
-        <button class="btn btn-secondary" id="searchBtn">Buscar</button>
-        <button class="btn btn-outline-secondary" id="clearSearchBtn">Limpiar</button>
+        <input type="text" class="form-control" id="eventSearch" placeholder="Buscar por nombre, teléfono o idea...">
+        <button class="btn btn-tenebris-gold" id="searchBtn" type="button">
+          <i class="fas fa-search me-1"></i> Buscar
+        </button>
+        <button class="btn btn-tenebris-outline" id="clearSearchBtn" type="button">
+          Limpiar
+        </button>
       </div>
     </div>
 
-    <!-- Contenedor del Calendario -->
+    <!-- Contenedor del Calendario FullCalendar -->
     <div id="calendar"></div>
   </main>
 
-  <!-- Modal para crear/editar citas -->
-  <div id="modal" class="custom-modal" style="display: none;">
+  <!-- Modal para Crear / Editar Cita -->
+  <div id="modal" class="custom-modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title">Detalles de la Cita</h3>
-        <button type="button" class="close">&times;</button>
-      </div>
-      <form id="appointmentForm">
-        <!-- Campo oculto para identificar el evento en modo edición -->
-        <input type="hidden" id="eventId" value="">
-        <div class="mb-3">
-          <label for="name" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
+        <div>
+          <h3 class="modal-title">Detalles de la Cita</h3>
+          <small id="modalSubtitle" class="text-muted"></small>
         </div>
+        <button type="button" class="close" aria-label="Cerrar">&times;</button>
+      </div>
+
+      <form id="appointmentForm">
+        <!-- Campo oculto para ID del evento -->
+        <input type="hidden" id="eventId" value="">
+
         <div class="mb-3">
-          <label for="hora" class="form-label">Hora</label>
+          <label for="name" class="form-label text-light">Nombre Completo *</label>
+          <input type="text" class="form-control" id="name" placeholder="Ej: Valentina Morales" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="hora" class="form-label text-light">Hora de la Cita *</label>
           <input type="time" class="form-control" id="hora" required>
         </div>
+
         <div class="mb-3">
-          <label for="telefono" class="form-label">Número Telefónico</label>
-          <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu número" required>
+          <label for="telefono" class="form-label text-light">Número de Teléfono / WhatsApp *</label>
+          <input type="tel" class="form-control" id="telefono" placeholder="Ej: 3156595769" required>
         </div>
+
+        <div class="mb-3">
+          <label for="idea" class="form-label text-light">Idea del Tatuaje / Zona</label>
+          <input type="text" class="form-control" id="idea" placeholder="Ej: Realismo en antebrazo, Black & Grey">
+        </div>
+
         <div class="modal-actions">
-          <button type="submit" class="btn btn-primary" id="saveBtn">Guardar Cita</button>
-          <button type="button" class="btn btn-danger" id="deleteBtn" style="display: none;">Eliminar Cita</button>
+          <button type="submit" class="btn btn-tenebris-gold" id="saveBtn">Guardar Cita</button>
+          
+          <button type="button" class="btn btn-whatsapp-action" id="whatsappBtn" style="display: none;">
+            <i class="fab fa-whatsapp"></i> Confirmar por WhatsApp
+          </button>
+          
+          <button type="button" class="btn btn-danger" id="deleteBtn" style="display: none;">
+            <i class="fas fa-trash me-1"></i> Eliminar Cita
+          </button>
         </div>
       </form>
     </div>
   </div>
 
-  <!-- Notificación (Toast) -->
+  <!-- Notificación Toast -->
   <div id="notification" class="custom-notification" style="display: none;">
-    <p id="notificationMessage"></p>
+    <p id="notificationMessage" class="m-0"></p>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 Tenebris Tattoo - Todos los derechos reservados a CodeTech.</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/tu_pagina" target="_blank" class="social-link">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/tu_pagina" target="_blank" class="social-link">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.tiktok.com/@tu_pagina" target="_blank" class="social-link">
-        <i class="fab fa-tiktok"></i>
-      </a>
+  <!-- Footer Principal -->
+  <footer class="footer-main">
+    <div class="container footer-content">
+      <p>&copy; 2025 <strong>Tenebris Tattoo</strong> — Todos los derechos reservados a <span>CodeTech</span>.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1AciSmvb2U/" target="_blank" class="social-link" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/tenebris__tattoo/?igsh=aTVobnowZmR3dTNy#" target="_blank" class="social-link" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@tenebris__tattoo?_t=ZS-8voj0Oq836K&_r=1" target="_blank" class="social-link" aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
     </div>
   </footer>
 
+  <!-- Botón Flotante Volver Arriba -->
+  <a href="#" id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
   <!-- Scripts -->
-  <!-- FullCalendar principal -->
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-  <!-- Archivo de localización de FullCalendar -->
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
-  <!-- Bootstrap Bundle (incluye Popper) para tooltips -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Tu archivo de JavaScript -->
   <script src="app.js"></script>
 </body>
 

@@ -4,35 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tenebris Tattoo</title>
+  <title>Tenebris Tattoo - Arte Que Trasciende la Piel | Estudio en Bogotá</title>
+  <meta name="description" content="Estudio de tatuajes Tenebris Tattoo en Bogotá. Especialistas en Black & Grey, Realismo, Sombras y Línea Fina. Diseños exclusivos y personalizados.">
+
   <!-- Fuentes de Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Enlace a Bootstrap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Enlace a Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <!-- Enlace a CSS personalizado -->
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- CSS Personalizado -->
   <link rel="stylesheet" href="styles.css">
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <!-- Encabezado -->
-  <header class="header-svg">
-    <!-- SVG decorativo reemplazando cualquier barra negra -->
-    <div class="header-wave">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="rgb(33, 37, 41)" fill-opacity="1"
-          d="M0,320L26.7,304C53.3,288,107,256,160,245.3C213.3,235,267,245,320,224C373.3,203,427,149,480,133.3C533.3,117,587,139,640,154.7C693.3,171,747,181,800,170.7C853.3,160,907,128,960,138.7C1013.3,149,1067,203,1120,213.3C1173.3,224,1227,192,1280,186.7C1333.3,181,1387,203,1413,213.3L1440,224L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z">
-        </path>
-      </svg>
-    </div>
-
-    <!-- Barra de navegación -->
+  <!-- Encabezado y Barra de Navegación -->
+  <header class="main-header">
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" aria-label="Tenebris Tattoo">
           <span style="--i:1">T</span>
           <span style="--i:2">E</span>
           <span style="--i:3">N</span>
@@ -41,280 +39,663 @@
           <span style="--i:6">R</span>
           <span style="--i:7">I</span>
           <span style="--i:8">S</span>
-          <span style="--i:9">T</span>
-          <span style="--i:10">A</span>
-          <span style="--i:11">T</span>
+          <span style="--i:9">&nbsp;</span>
+          <span style="--i:10">T</span>
+          <span style="--i:11">A</span>
           <span style="--i:12">T</span>
-          <span style="--i:13">O</span>
+          <span style="--i:13">T</span>
           <span style="--i:14">O</span>
+          <span style="--i:15">O</span>
         </a>
+
+        <!-- Botón Hamburguesa Móvil -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú de Enlaces -->
+        <!-- Menú de Enlaces Simplificado y Elegante -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item item1">
-              <a href="#inicio">Inicio</a>
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#intro">Inicio</a>
             </li>
-            <li class="nav-item item2">
-              <a href="#galeria">Galería</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#galeria">Galería</a>
             </li>
-            <li class="nav-item item3">
-              <a href="#testimonios">Testimonios</a>
+            <li class="nav-item">
+              <a class="nav-link" href="videos.html">Videos</a>
             </li>
-            <li class="nav-item item4">
-              <a href="#contacto">Contacto</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn-nav-cta" href="agenda.html">
+                <i class="fas fa-calendar-alt"></i> Agendar Cita
+              </a>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a class="nav-admin-link" href="admin.html" title="Panel de Administración>
+                <i class="fas fa-lock"></i>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
   </header>
 
-  <!-- Sección de Introducción -->
-  <section id="intro" class="my-5">
-    <div class="container text-center">
-      <h1>Arte que trasciende la piel</h1>
-      <p>Explora el estilo único de Tenebris Tattoo, donde cada diseño cuenta una historia y cada tatuaje es una obra de
-        arte personalizada.</p>
-      <div class="action-buttons">
-        <button class="btn btn-info mx-2"><a class="nav-link" href="#contacto">Contáctanos</a></button>
-        <button class="btn btn-secondary mx-2"> <a class="nav-link" href="videos.html">Videos</a></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Galería -->
-  <section id="galeria" class="my-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Galería</h2>
-      <div id="carouselGaleria" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-        <!-- Contenedor de slides -->
-        <div class="carousel-inner custom-carousel-inner">
-          <div class="carousel-item active">
-            <img src="tattoo1.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo2.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo3.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo4.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo5.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo6.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo7.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo8.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo9.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo10.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo11.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo12.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-          <div class="carousel-item">
-            <img src="tattoo13.jpg" class="d-block w-100" alt="Diseños Modernos">
-          </div>
-        </div>
-
-        <!-- Botones de control -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonios -->
-  <section id="testimonios" class="my-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Testimonios</h2>
-      <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
-        <div class="carousel-inner">
-          <!-- Testimonio 1 -->
-          <div class="carousel-item active">
-            <div class="row align-items-center">
-              <div class="col-md-6 mb-4">
-                <img src="testimonial-image1.jpg" class="img-fluid rounded shadow" alt="Cliente satisfecho">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-4">"Tenebris Tattoo transformó mis ideas en arte. La dedicación y creatividad del
-                    tatuador son inigualables."</p>
-                  <footer class="blockquote-footer">Laura García, clienta satisfecha</footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonio 2 -->
-          <div class="carousel-item">
-            <div class="row align-items-center">
-              <div class="col-md-6 mb-4">
-                <img src="testimonial-image2.jpg" class="img-fluid rounded shadow" alt="Cliente satisfecho">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-4">"Me encanta el diseño, es justo lo que quería. ¡Altamente recomendado!"</p>
-                  <footer class="blockquote-footer">Juan Pérez, cliente satisfecho</footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonio 3 -->
-          <div class="carousel-item">
-            <div class="row align-items-center">
-              <div class="col-md-6 mb-4">
-                <img src="testimonial-image3.jpg" class="img-fluid rounded shadow" alt="Cliente satisfecho">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-4">"El nivel de detalle en mi tatuaje es impresionante, superó completamente mis
-                    expectativas."</p>
-                  <footer class="blockquote-footer">Ana Martínez, cliente feliz</footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonio 4 -->
-          <div class="carousel-item">
-            <div class="row align-items-center">
-              <div class="col-md-6 mb-4">
-                <img src="testimonial-image4.jpg" class="img-fluid rounded shadow" alt="Cliente satisfecho">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-4">"El proceso fue fluido y profesional, ¡ya estoy pensando en mi próximo tatuaje!"</p>
-                  <footer class="blockquote-footer">Kevin Aldana, cliente habitual</footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonio 5 -->
-          <div class="carousel-item">
-            <div class="row align-items-center">
-              <div class="col-md-6 mb-4">
-                <img src="testimonial-image5.jpg" class="img-fluid rounded shadow" alt="Cliente satisfecho">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-4">"El diseño es único y completamente personalizado, exactamente lo que buscaba."</p>
-                  <footer class="blockquote-footer">Lucía Fernández, cliente feliz</footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonio 6 -->
-          <div class="carousel-item">
-            <div class="row align-items-center">
-              <div class="col-md-6 mb-4">
-                <img src="testimonial-image6.jpg" class="img-fluid rounded shadow" alt="Cliente satisfecho">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-4">"Una experiencia maravillosa, desde el primer boceto hasta el resultado final."</p>
-                  <footer class="blockquote-footer">Diego Ramírez, cliente satisfecho</footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Controles del Carrusel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="my-5">
+  <!-- Sección Hero Creativa -->
+  <section id="intro">
     <div class="container">
       <div class="row align-items-center">
-        <!-- Texto de contacto -->
-        <div class="col-md-6 mb-4">
-          <h2>Contáctanos para tu próximo tatuaje</h2>
-          <p>Estamos aquí para ayudarte a transformar tus ideas en arte. Escríbenos y agendemos tu cita.</p>
-          <ul class="list-unstyled">
-            <li><strong>Horario:</strong> Lunes a Domingo</li>
-            <li><strong>Dirección:</strong> DG 39A Sur - TV 38A</li>
-            <li><strong>Teléfono:</strong> +57-315-659-57-69</li>
-          </ul>
+        <!-- Columna de Texto -->
+        <div class="col-lg-7 text-center text-lg-start">
+          <div class="hero-badge">
+            <i class="fas fa-certificate"></i> Estudio Privado en Bogotá • Arte Exclusivo
+          </div>
+          <h1>ARTE QUE TRASCIENDE <br><span class="text-gold-gradient">LA PIEL</span></h1>
+          <p>En <strong>Tenebris Tattoo</strong> convertimos tus conceptos, vivencias y emociones en piezas de arte únicas. Especialistas en sombras profundas, realismo de alto impacto y trazado milimétrico.</p>
+          
+          <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+            <a class="btn-tenebris-gold" href="agenda.html">
+              <i class="fas fa-calendar-check"></i> Agendar Cita
+            </a>
+            <a class="btn-tenebris-outline" href="#galeria">
+              <i class="fas fa-images"></i> Ver Portafolio
+            </a>
+            <a class="btn-tenebris-outline" href="https://api.whatsapp.com/send?phone=573156595769&text=Hola%20Tenebris%20Tattoo,%20quisiera%20asesoría%20para%20un%20tatuaje" target="_blank">
+              <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+            </a>
+          </div>
         </div>
-        <!-- Imagen -->
-        <div class="col-md-6">
-          <img src="tattoo-hand.jpg" class="img-fluid rounded shadow" alt="Brazo tatuado">
+
+        <!-- Columna de Imagen Destacada -->
+        <div class="col-lg-5 mt-5 mt-lg-0">
+          <div class="hero-feature-card">
+            <img src="tattoo1.jpg" alt="Obra de Arte Destacada - Tenebris Tattoo">
+            <div class="hero-card-overlay">
+              <span class="portfolio-tag">Pieza del Mes</span>
+              <h4>Composición Black & Grey</h4>
+              <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> Bogotá D.C. • Sesión Completa</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de Métricas y Confianza -->
+      <div class="metrics-strip">
+        <div class="metric-item">
+          <div class="metric-number">+500</div>
+          <div class="metric-label">Tatuajes Realizados</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number">5.0 ★</div>
+          <div class="metric-label">Opiniones Verificadas</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number">100%</div>
+          <div class="metric-label">Material Descartable</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number">1 a 1</div>
+          <div class="metric-label">Asesoría Personalizada</div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Reserva -->
-  <section id="reservar" class="my-5 text-center">
+
+  <!-- Sección de Especialidades (Servicios) -->
+  <section id="especialidades">
     <div class="container">
-      <h2>Reserva tu cita ahora</h2>
-      <p>Agrega un toque personal con nuestros diseños únicos. ¡Contáctanos hoy mismo!</p>
-      <a class="btn btn-primary btn-lg"
-        href="https://api.whatsapp.com/send?phone=573156595769&text=Hola,%20Quisiera%20Agendar%20Una%20Cita"
-        target="_blank">
-        Agenda Aquí
-      </a>
+      <div class="section-header">
+        <div class="section-subtitle">Nuestras Disciplinas</div>
+        <h2 class="section-title">Especialidades Artísticas</h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- Especialidad 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-skull"></i>
+            </div>
+            <h3>Black & Grey</h3>
+            <p>Gradaciones de sombra hiper limpias, contrastes oscuros profundos y una gama tonal suave que perdura con los años.</p>
+          </div>
+        </div>
+
+        <!-- Especialidad 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>Realismo</h3>
+            <p>Retratos de rostros, animales, esculturas y figuras mitológicas con fidelidad fotográfica y texturas vivas en la piel.</p>
+          </div>
+        </div>
+
+        <!-- Especialidad 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-pen-nib"></i>
+            </div>
+            <h3>Línea Fina & Micro</h3>
+            <p>Trazos de precisión quirúrgica, geometría sagrada, lettering caligráfico y piezas minimalistas con gran elegancia.</p>
+          </div>
+        </div>
+
+        <!-- Especialidad 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h3>Cover-Up & Diseño</h3>
+            <p>Transformación, cobertura o restauración de tatuajes antiguos y cicatrices mediante bocetos a medida hechos en carboncillo.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer-svg">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="rgb(33, 37, 41)" fill-opacity="1"
-        d="M0,64L48,101.3C96,139,192,213,288,218.7C384,224,480,160,576,128C672,96,768,96,864,112C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-  </footer>
+  <!-- Sección de Galería / Portafolio Moderno con Filtros -->
+  <section id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Portafolio Exclusivo</div>
+        <h2 class="section-title">Galería de Trabajos</h2>
+        <p class="text-muted mt-2">Fotos tomadas directamente de sesiones reales. Toca cualquier tatuaje para ampliar los detalles.</p>
+      </div>
 
-  <!-- Contenido principal del footer -->
-  <div class="footer-content">
-    <p>&copy; 2025 <strong>Tenebris Tattoo</strong> - Todos los derechos reservados a <span>CodeTech</span>.</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/share/1AciSmvb2U/" target="_blank" class="social-link">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/tenebris__tattoo/?igsh=aTVobnowZmR3dTNy#" target="_blank" class="social-link">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.tiktok.com/@tenebris__tattoo?_t=ZS-8voj0Oq836K&_r=1" target="_blank" class="social-link">
-        <i class="fab fa-tiktok"></i>
-      </a>
+      <!-- Filtros por Estilo -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="blackwork">Black & Grey</button>
+        <button class="filter-btn" data-filter="realismo">Realismo</button>
+        <button class="filter-btn" data-filter="fina">Línea Fina & Arte</button>
+      </div>
+
+      <!-- Cuadrícula Optimizada (Proporción Vertical 3:4 que no corta las fotos) -->
+      <div class="portfolio-grid">
+        
+        <!-- Item 1 -->
+        <div class="portfolio-item" data-category="blackwork realismo">
+          <div class="portfolio-card" data-title="Composición Mitológica Black & Grey" data-tag="Black & Grey">
+            <img src="tattoo1.jpg" alt="Composición Mitológica Black & Grey - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Black & Grey</span>
+              <div class="portfolio-title">Composición Mitológica</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="portfolio-item" data-category="blackwork">
+          <div class="portfolio-card" data-title="Manga Completa con Sombra y Texturas" data-tag="Black & Grey">
+            <img src="tattoo2.jpg" alt="Manga Completa con Sombra y Texturas - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Manga Completa</span>
+              <div class="portfolio-title">Sombras y Contraste</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="portfolio-item" data-category="realismo">
+          <div class="portfolio-card" data-title="Retrato Realista con Alto Detalle" data-tag="Realismo">
+            <img src="tattoo3.jpg" alt="Retrato Realista con Alto Detalle - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Realismo</span>
+              <div class="portfolio-title">Retrato y Sombra Profunda</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="portfolio-item" data-category="fina blackwork">
+          <div class="portfolio-card" data-title="Diseño Artístico Personalizado" data-tag="Línea Fina">
+            <img src="tattoo4.jpg" alt="Diseño Artístico Personalizado - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Línea Fina</span>
+              <div class="portfolio-title">Diseño Anatómico</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="portfolio-item" data-category="realismo">
+          <div class="portfolio-card" data-title="Rostro y Mirada Realista" data-tag="Realismo">
+            <img src="tattoo5.jpg" alt="Rostro y Mirada Realista - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Realismo</span>
+              <div class="portfolio-title">Expresión y Mirada</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="portfolio-item" data-category="blackwork">
+          <div class="portfolio-card" data-title="Calavera y Arte Oscuro Tenebris" data-tag="Black & Grey">
+            <img src="tattoo6.jpg" alt="Calavera y Arte Oscuro Tenebris - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Black & Grey</span>
+              <div class="portfolio-title">Arte Oscuro & Sombras</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="portfolio-item" data-category="fina">
+          <div class="portfolio-card" data-title="Trazos Delicados y Precisión" data-tag="Línea Fina">
+            <img src="tattoo7.jpg" alt="Trazos Delicados y Precisión - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Línea Fina</span>
+              <div class="portfolio-title">Precisión Milimétrica</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="portfolio-item" data-category="blackwork">
+          <div class="portfolio-card" data-title="Tatuaje en Brazo con Alto Contraste" data-tag="Black & Grey">
+            <img src="tattoo8.jpg" alt="Tatuaje en Brazo con Alto Contraste - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Black & Grey</span>
+              <div class="portfolio-title">Tatuaje en Brazo</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="portfolio-item" data-category="realismo">
+          <div class="portfolio-card" data-title="Rostro Escultórico y Difuminado" data-tag="Realismo">
+            <img src="tattoo9.jpg" alt="Rostro Escultórico y Difuminado - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Realismo</span>
+              <div class="portfolio-title">Escultura y Relieve</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="portfolio-item" data-category="fina blackwork">
+          <div class="portfolio-card" data-title="Geometría y Simbolismo" data-tag="Línea Fina">
+            <img src="tattoo10.jpg" alt="Geometría y Simbolismo - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Geometría</span>
+              <div class="portfolio-title">Simbolismo Sagrado</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="portfolio-item" data-category="fina">
+          <div class="portfolio-card" data-title="Líneas Finas en Pierna" data-tag="Línea Fina">
+            <img src="tattoo11.jpg" alt="Líneas Finas en Pierna - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Línea Fina</span>
+              <div class="portfolio-title">Líneas Finas y Sutiles</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="portfolio-item" data-category="realismo">
+          <div class="portfolio-card" data-title="Pieza de Pecho Personalizada" data-tag="Realismo">
+            <img src="tattoo12.jpg" alt="Pieza de Pecho Personalizada - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Realismo</span>
+              <div class="portfolio-title">Pieza de Alto Impacto</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 13 -->
+        <div class="portfolio-item" data-category="blackwork">
+          <div class="portfolio-card" data-title="Tatuaje en Mano y Nudillos" data-tag="Black & Grey">
+            <img src="tattoo13.jpg" alt="Tatuaje en Mano y Nudillos - Tenebris Tattoo">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Black & Grey</span>
+              <div class="portfolio-title">Tatuaje en Mano</div>
+              <div class="portfolio-zoom-hint"><i class="fas fa-search-plus"></i> Ver en pantalla completa</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: El Proceso Creativo -->
+  <section id="proceso">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Paso a Paso</div>
+        <h2 class="section-title">El Camino Hacia Tu Tatuaje</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <h4>Consulta & Concepto</h4>
+          <p>Nos compartes tus ideas, referencias y zona del cuerpo donde irá el tatuaje para definir el estilo ideal.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <h4>Boceto Exclusivo</h4>
+          <p>Creamos un diseño único (digital o en carboncillo) adaptado a las curvas anatómicas de tu cuerpo.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <h4>La Sesión</h4>
+          <p>Trabajamos en un ambiente privado con materiales 100% descartables y bioseguridad grado clínico.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <h4>Cicatrización</h4>
+          <p>Te entregamos la guía de cuidados posteriores y respondemos cualquier duda durante tu proceso de curación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Testimonios -->
+  <section id="testimonios">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Confianza y Experiencia</div>
+        <h2 class="section-title">Opiniones de Nuestros Clientes</h2>
+      </div>
+
+      <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-5 mb-4 mb-md-0">
+                <img src="testimonial-image1.jpg" class="testimonial-img shadow" alt="Cliente satisfecho">
+              </div>
+              <div class="col-md-6">
+                <div class="testimonial-card">
+                  <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <blockquote class="blockquote-dark">
+                    <p>Tenebris Tattoo transformó mis ideas en una verdadera obra de arte. La dedicación, paciencia y pulso del artista son inigualables.</p>
+                  </blockquote>
+                  <div class="client-name">Laura García — Bogotá</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-5 mb-4 mb-md-0">
+                <img src="testimonial-image2.jpg" class="testimonial-img shadow" alt="Cliente satisfecho">
+              </div>
+              <div class="col-md-6">
+                <div class="testimonial-card">
+                  <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <blockquote class="blockquote-dark">
+                    <p>Me encanta el diseño, es exactamente lo que tenía en mente. La higiene y atención durante toda la sesión fueron excepcionales.</p>
+                  </blockquote>
+                  <div class="client-name">Juan Pérez — Cliente Habitual</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-5 mb-4 mb-md-0">
+                <img src="testimonial-image3.jpg" class="testimonial-img shadow" alt="Cliente satisfecho">
+              </div>
+              <div class="col-md-6">
+                <div class="testimonial-card">
+                  <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <blockquote class="blockquote-dark">
+                    <p>El nivel de detalle y sombra en mi tatuaje es impresionante. Una experiencia increíble de inicio a fin.</p>
+                  </blockquote>
+                  <div class="client-name">Ana Martínez — Bogotá</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev" aria-label="Anterior">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next" aria-label="Siguiente">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Preguntas Frecuentes (FAQ) -->
+  <section id="faq">
+    <div class="container" style="max-width: 850px;">
+      <div class="section-header">
+        <div class="section-subtitle">Resuelve tus Dudas</div>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+      </div>
+
+      <div class="accordion accordion-dark" id="faqAccordion">
+        <!-- Pregunta 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq1" aria-expanded="true" aria-controls="collapseFaq1">
+              ¿Cómo se calcula el costo de un tatuaje?
+            </button>
+          </h2>
+          <div id="collapseFaq1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              El valor depende del tamaño en centímetros, la complejidad del diseño, nivel de detalle y la zona del cuerpo donde se colocará. Puedes enviarnos tu idea por WhatsApp para una cotización exacta y sin compromiso.
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq2" aria-expanded="false" aria-controls="collapseFaq2">
+              ¿Qué medidas de higiene y bioseguridad manejan?
+            </button>
+          </h2>
+          <div id="collapseFaq2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Utilizamos agujas y cartuchos 100% descartables que se abren delante de ti. Todos los campos de trabajo, máquinas y superficies se protegen con barreras estériles y tintas certificadas internacionalmente.
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq3" aria-expanded="false" aria-controls="collapseFaq3">
+              ¿Cómo debo prepararme antes de mi sesión?
+            </button>
+          </h2>
+          <div id="collapseFaq3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Te recomendamos dormir bien la noche anterior, hidratarte abundantemente, comer un buen desayuno o almuerzo antes de llegar y evitar el consumo de alcohol o medicamentos anticoagulantes 24 horas antes.
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq4" aria-expanded="false" aria-controls="collapseFaq4">
+              ¿Hacen coberturas (Cover-Up) de tatuajes antiguos?
+            </button>
+          </h2>
+          <div id="collapseFaq4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí. Realizamos una evaluación previa de la tonalidad y saturación del tatuaje existente para diseñar una pieza con sombras estratégicas que lo cubra de manera estética y armónica.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="contact-card">
+            <h2>Hablemos de tu idea</h2>
+            <p>Estamos listos para transformar tu concepto en una pieza de arte exclusiva. Escríbenos o visítanos en nuestro estudio.</p>
+            
+            <ul class="contact-info-list">
+              <li>
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>Horario de Atención:</strong><br>
+                  Lunes a Domingo (Con cita previa)
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <strong>Ubicación:</strong><br>
+                  DG 39A Sur - TV 38A, Bogotá, Colombia
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <strong>Teléfono / WhatsApp:</strong><br>
+                  <a href="https://api.whatsapp.com/send?phone=573156595769" target="_blank" style="color: var(--accent-gold); text-decoration: none;">
+                    +57 315 659 5769
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="mt-4">
+              <a class="btn-tenebris-gold" href="https://api.whatsapp.com/send?phone=573156595769&text=Hola%20Tenebris%20Tattoo,%20quisiera%20cotizar%20un%20tatuaje" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chatear por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="contact-image-wrapper">
+            <img src="tattoo-hand.jpg" alt="Brazo y mano tatuada - Tenebris Tattoo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Reserva -->
+  <section id="reservar">
+    <div class="container">
+      <h2>Reserva tu cita hoy</h2>
+      <p>Asegura tu espacio y cotiza tu diseño directamente con nuestro artista. Atendemos con todos los protocolos de higiene y bioseguridad.</p>
+      
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a class="btn-booking" href="https://api.whatsapp.com/send?phone=573156595769&text=Hola%20Tenebris%20Tattoo,%20quisiera%20agendar%20una%20cita%20para%20un%20tatuaje" target="_blank">
+          <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
+        </a>
+        <a class="btn-tenebris-outline" href="agenda.html">
+          <i class="fas fa-calendar-alt"></i> Ver Calendario de Citas
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Lightbox Mejorado (Con Flechas y Cotización por WhatsApp) -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-dark">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <span id="lightboxCategory" class="portfolio-tag mb-1 d-inline-block">Tenebris Tattoo</span>
+            <h5 class="modal-title" id="lightboxTitle">Detalle de la Obra</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body p-3">
+          <div class="lightbox-img-wrapper">
+            <button id="lightboxPrev" class="lightbox-nav-btn" aria-label="Anterior">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <img id="lightboxImage" src="" alt="Tatuaje ampliado">
+
+            <button id="lightboxNext" class="lightbox-nav-btn" aria-label="Siguiente">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="lightbox-footer-details">
+            <small class="text-muted"><i class="fas fa-info-circle me-1"></i> Usa las flechas o teclas del teclado para navegar entre obras.</small>
+            <a id="lightboxWhatsappBtn" href="#" target="_blank" class="btn btn-whatsapp-action">
+              <i class="fab fa-whatsapp"></i> Cotizar este estilo por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Botón para volver al inicio -->
-  <a href="#" id="back-to-top" class="back-to-top">
+  <!-- Footer Principal -->
+  <footer class="footer-main">
+    <div class="container footer-content">
+      <p>&copy; 2025 <strong>Tenebris Tattoo</strong> — Todos los derechos reservados a <span>CodeTech</span>.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1AciSmvb2U/" target="_blank" class="social-link" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/tenebris__tattoo/?igsh=aTVobnowZmR3dTNy#" target="_blank" class="social-link" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@tenebris__tattoo?_t=ZS-8voj0Oq836K&_r=1" target="_blank" class="social-link" aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante Volver Arriba -->
+  <a href="#" id="back-to-top" class="back-to-top" aria-label="Volver arriba">
     <i class="fas fa-arrow-up"></i>
   </a>
 
-
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="app.js"></script>
 </body>
 

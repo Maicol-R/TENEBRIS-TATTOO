@@ -1,0 +1,92 @@
+/* ===================================================
+   TENEBRIS TATTOO - Estilos del Panel de Administración
+   =================================================== */
+
+.admin-wrapper {
+  min-height: 80vh;
+  padding: 40px 0 60px;
+}
+
+.admin-login-box {
+  max-width: 420px;
+  margin: 80px auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 35px 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.admin-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.admin-nav-tabs .nav-link {
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: all 0.25s ease;
+}
+
+.admin-nav-tabs .nav-link:hover {
+  color: #ffffff;
+  border-color: var(--accent-gold);
+}
+
+.admin-nav-tabs .nav-link.active {
+  background: var(--accent-gold) !important;
+  color: #0a0b0e !important;
+  border-color: var(--accent-gold) !important;
+  font-weight: 700;
+}
+
+.admin-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f1117;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.admin-item-row:hover {
+  border-color: var(--border-color);
+}
+
+.admin-thumb-preview {
+  width: 60px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.stat-badge {
+  font-size: 1.8rem;
+  font-family: var(--font-title);
+  color: var(--accent-gold);
+  line-height: 1;
+}
+
